@@ -1,0 +1,257 @@
+@media screen and (min-width: 350px) {
+    .thumbnail {
+        .container {
+           width: 280px;
+        }
+    }
+    .contacts {
+        .container {
+            .form-container {
+                min-width: 100%;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .thumbnail {
+        .container {
+            width: 486px;
+            h3 {
+                font-size: 20px;
+            }
+            div {
+                h1 {
+                    font-size: 64px; 
+                }
+                p {
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+    .about {
+        .container {
+            div {
+                .container-images {
+                    width: 450px;
+                    height: 450px;
+                    .image-wrapper {
+                        img {
+                            width: 500px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .contacts {
+        .container {
+            .title {
+                h2 {
+                    font-size: 48px;
+                }
+                span {
+                    width: 100px;
+                }
+            }
+            .form-container {
+                width: 500px;
+                min-width: 300px;
+            }
+        }
+    }
+    .projects {
+        .container {
+            .title {
+                h2 {
+                    font-size: 48px;
+                }
+                span {
+                    width: 100px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 700px) {
+    .svg-container {
+        top: 0;
+        right: 0;
+    }
+    .background-svg {
+        width: 453px;
+        height: 396px;
+    } 
+}
+
+@media screen and (min-width: 992px) {
+    nav {
+        padding: 12px 120px;
+        ul {
+            flex-direction: inherit;
+            gap: 3%;
+        }
+    }
+    .background-svg {
+        width: 453px;
+        height: 396px;
+    }
+    .thumbnail {
+        .container {
+            padding: 12px 120px;
+            h3 {
+                font-size: 20px;
+            }
+            div {
+                h1 {
+                    font-size: 64px; 
+                }
+                p {
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+    .about {
+        .container {
+            padding: 12px 120px;
+        }
+    }
+    .contacts {
+        .container {
+            padding: 12px 120px;
+        }
+    }
+    .projects {
+        .container {
+            padding: 12px 120px;
+            .timeline {
+                .project-container {
+                    justify-content: center;
+                    .line {
+                        left: 50%;
+                    }
+                    .project-row {
+                        .timeline-item {
+                            .circle {
+                                .project-details {
+                                    align-items: center;
+                                    flex-direction: unset;
+                                    justify-content: unset;
+                                    position: inherit;
+                                    left: auto;
+                                    box-shadow: none;
+                                    padding: 0;
+                                    border-radius: none;
+                                    gap: 0;
+                                    .project-item {
+                                        position: absolute;
+                                        left: 55%;
+                                        background: #FFF;
+                                        box-shadow: 7px 7px 20px 0px rgba(100, 162, 255, 0.15);
+                                        padding: 3%;
+                                        border-radius: 20px;
+                                        div {
+                                            h2 {
+                                                font-size: 35px;
+                                            }
+                                            p {
+                                                font-size: 20px;
+                                            }
+                                            button {
+                                                font-size: 13px;
+                                            }
+                                        }
+                                    }
+                                    .project-date {
+                                        position: absolute;
+                                        right: 55%;
+                                        justify-content: center;
+                                    }
+                                }
+                            }
+                            .project-2 {
+                                .project-details {
+                                    .project-item {
+                                        left: auto;
+                                        right: 55%;
+                                    }
+                                    .project-date {
+                                        right: auto;
+                                        left: 55%;
+                                    }
+                                }  
+                            }
+                        }
+                    }
+                }
+                a {
+                    margin: auto;
+                    padding-left: 2px;
+                    .see-more {
+                        display: block;
+                    }
+                    svg {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .about {
+        .container {
+            flex-direction: row;
+            div {
+                width: 50%;
+            }
+            .container-text {
+                width: 50%;
+                h2{
+                    font-size: 48px;
+                }
+            }
+        }
+    }
+    .projects {
+        .container {
+            .title {
+                h2 {
+                    font-size: 48px;
+                }
+                span {
+                    width: 100px;
+                }
+            }
+            .timeline {
+                .project-container {
+                    .project-row {
+                        .timeline-item {
+                            .circle {
+                                .project-details {
+                                    .project-item {
+                                        div {
+                                            width: 375.843px;
+                                        }
+                                    }
+                                }
+                                
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1350px) {
+    .background-svg {
+        width: 720px;
+        height: 629px;
+    }
+}

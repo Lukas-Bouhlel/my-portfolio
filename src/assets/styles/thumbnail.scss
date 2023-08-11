@@ -1,0 +1,59 @@
+.thumbnail {
+    margin-top: 55px;
+    .container {
+        gap: 12px;
+        display: flex;
+        flex-direction: column;
+        padding: 12px 25px;
+        h3 {
+            color:  $blue;
+            font-size: 20px;
+            font-weight: 700;
+            line-height: normal;
+            text-transform: uppercase;
+        }
+        div {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 32px;
+            h1 {
+                color: $black;
+                font-family: 'Playfair Display', serif;
+                font-size: 35px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 120%; 
+            }
+            p {
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 36px;
+                color: $gray;
+            }
+            .thumbnail-buttons {
+                display: flex;
+                flex-direction: row;
+                align-items: flex-start;
+                gap: 12px;
+                .button-1 {
+                    padding: 8px 24px;
+                    align-items: flex-start;
+                    border-radius: 8px;
+                    background: $blue;
+                    border: 2px solid transparent;
+                    cursor: pointer;
+                }
+                .button-2 {
+                    padding: 8px 24px;
+                    align-items: flex-start;
+                    border-radius: 8px;
+                    border: 2px solid $black;
+                    background: transparent;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

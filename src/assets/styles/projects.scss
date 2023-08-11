@@ -1,0 +1,191 @@
+.projects {
+    margin-top: 145px;
+    .container {
+        padding: 12px 25px;
+        .title {
+            h2 {
+            text-align: center;
+            font-size: 30px;
+            font-family: Playfair Display, sans-serif;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 72px;
+            color: #25282B;
+            }
+    
+            span {
+            width: 82px;
+            height: 4px;
+            border-radius: 2px;
+            background: $blue;
+            display: block;
+            margin: 0 auto;
+            }
+        }
+  
+        .timeline {
+            position: relative;
+            margin: 0 auto;
+            margin-top: 80px;
+            height: 90%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            .project-container {
+                display: flex;
+                position: relative;
+                height: 100%;
+                margin-top: 20px;
+                justify-content: flex-start;
+                .line {
+                    width: 2px;
+                    height: 100%;
+                    position: absolute;
+                    left: 14px;
+                    margin: 0 auto;
+                    border-left: 2px dashed $blue;
+                }
+                .project-row {
+                    display: flex;
+                    .timeline-item {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-evenly;
+                        flex-direction: column;
+                        .circle {
+                            width: 20px;
+                            height: 20px;
+                            background: $blue;
+                            border-radius: 50%;
+                            transition: background 0.3s;
+                            z-index: 1;
+                            border: 5px solid transparent;
+                            display: flex;
+                            align-items: center;
+                            .project-details {
+                                width: auto;
+                                display: flex;
+                                transition: opacity 0.3s, visibility 0s linear 0.3s;
+                                flex-direction: column-reverse;
+                                justify-content: flex-start;
+                                position: absolute;
+                                left: 55px;
+                                background: white;
+                                box-shadow: 7px 7px 20px 0px rgba(100, 162, 255, 0.15);
+                                padding: 25px;
+                                border-radius: 20px;
+                                gap: 25px;
+                                .project-item {
+                                    border: none;
+                                    background: none;
+                                    position: initial;
+                                    padding: 0;
+                                    background: none;
+                                    box-shadow: none;
+                                    width: auto;
+                                    div {
+                                        display: flex;
+                                        width: 100%;
+                                        flex-direction: column;
+                                        align-items: flex-start;
+                                        gap: 24px;
+                                        h2 {
+                                            font-style: normal;
+                                            font-weight: 700;
+                                            line-height: 150%;
+                                            font-family: Playfair Display;
+                                            color: $black;
+                                            font-size: 35px;
+                                            font-size: 30px;
+                                        }
+                                        p {
+                                            color: $gray;
+                                            font-size: 15px;
+                                            font-style: normal;
+                                            font-weight: 400;
+                                            line-height: 150%;
+                                        }
+                                        button {
+                                            padding: 0;
+                                            font-family: 'Comfortaa', sans-serif;
+                                            text-align: left;
+                                            padding: 8px 24px;
+                                            align-items: flex-start;
+                                            border-radius: 8px;
+                                            border: 2px solid $black;
+                                            color: $black;
+                                            background: transparent;
+                                            cursor: pointer;
+                                            text-decoration: none;
+                                            font-size: 12px;
+                                        }
+                                    }
+                                }
+                                .project-date {
+                                    position: initial;
+                                    width: auto;
+                                    display: flex;
+                                    justify-content: flex-start;
+                                    p {
+                                        color: $blue;
+                                    }
+                                }
+                            }
+                            &.active {
+                                background: white;
+                                border: 5px solid #73a2fb;
+                            }
+                            
+                        }
+                        .project-2 {
+                            .project-details {
+                                .project-item {
+                                    left: auto;
+                                    right: auto;
+                                }
+                                .project-date {
+                                    right: auto;
+                                    left: auto;
+                                }
+                            }  
+                        }
+                    }
+                }
+            }
+            a { 
+                text-decoration: none;
+                width: fit-content;
+                margin: initial;
+                .see-more {
+                    text-align: center;
+                    margin-top: 23px;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 500;
+                    color: $blue;
+                    display: none;
+                }
+                svg {
+                    margin-top: 23px;
+                    width: 30px;
+                    animation: bounce 2s infinite;
+                    &:hover {
+                      animation: none; 
+                    }
+                }
+            }
+        }
+    }
+}
+@keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+	40% {
+    transform: translateY(-8px);
+  }
+	60% {
+    transform: translateY(-5px);
+  }
+}
