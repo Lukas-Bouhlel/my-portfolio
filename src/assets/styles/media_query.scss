@@ -4,7 +4,7 @@
            width: 280px;
         }
     }
-    .contacts {
+    #contacts {
         .container {
             .form-container {
                 min-width: 100%;
@@ -31,6 +31,7 @@
         }
     }
     .about {
+        margin-top: 280px;
         .container {
             div {
                 .container-images {
@@ -45,7 +46,8 @@
             }
         }
     }
-    .contacts {
+    #contacts {
+        margin-top: 280px;
         .container {
             .title {
                 h2 {
@@ -62,6 +64,7 @@
         }
     }
     .projects {
+        margin-top: 280px;
         .container {
             .title {
                 h2 {
@@ -119,7 +122,7 @@
             padding: 12px 120px;
         }
     }
-    .contacts {
+    #contacts {
         .container {
             padding: 12px 120px;
         }

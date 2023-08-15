@@ -22,16 +22,16 @@
                 <div class="background-menu animated"></div>
                 <div class="content-menu">
                     <ul>
-                        <li><a to="/" class="active">Home</a></li>
-                        <li><a to="/">Biography</a></li>
-                        <li><a to="/">My Projects</a></li>
-                        <li><a @click="scrollToContact">Contact</a></li>
+                      <li><router-link to="/my-portfolio">Home</router-link></li>
+                      <li><router-link to="/biography">Biography</router-link></li>
+                      <li><router-link to="/projects">My Projects</router-link></li>
                     </ul> 
                 </div>
             </div>
         </div>
     </nav>
   </header>
+  <router-view></router-view>
 </template>
 
 <script>
@@ -58,9 +58,10 @@ export default {
     handleIconMenuClick() {
       this.isOpened = true;
       document.documentElement.style.overflow = 'hidden';
-    },
-    scrollToContact() {
-      this.$emit('contact-link-clicked');
+    }
+  },
+  watch: {
+    $route(to, from) {
       this.isMenuOpen = false;
       this.isOpened = false;
       document.documentElement.style.overflow = 'auto';
