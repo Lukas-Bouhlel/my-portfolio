@@ -7,6 +7,16 @@
     pointer-events: none; 
 }
 
+.container {
+    padding: 12px 25px;
+}
+
+@media screen and (min-width: 992px) {
+    .container {
+        padding: 12px 120px;
+    }
+}
+
   
 .background-svg {
     width: 107px; 

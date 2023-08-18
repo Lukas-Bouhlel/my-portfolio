@@ -13,18 +13,18 @@
       </svg>
     </div>
     <nav>
-      <a href="#" class="logo">Lukas Bouhlel</a>
+      <router-link to="/my-portfolio" class="logo">Lukas Bouhlel</router-link>
         <div class="menu-burger">
             <div @click="handleToggleMenu" class="container-button-menu">
                 <IconMenu :isOpened="isOpened"  @click="handleIconMenuClick"/> 
             </div>
-            <div v-show="isMenuOpen" class="menu-scroll">
+            <div class="menu-scroll" :class="{ 'open-menu': isMenuOpen, 'close-menu': isMenuClosed }">
                 <div class="background-menu animated"></div>
                 <div class="content-menu">
                     <ul>
-                      <li><router-link to="/my-portfolio">Home</router-link></li>
-                      <li><router-link to="/biography">Biography</router-link></li>
-                      <li><router-link to="/projects">My Projects</router-link></li>
+                      <li><router-link @click="closeMenuIfNeeded('/my-portfolio')" to="/my-portfolio">Home</router-link></li>
+                      <li><router-link @click="closeMenuIfNeeded('/my-portfolio/biography')" to="/my-portfolio/biography">Biography</router-link></li>
+                      <li><router-link @click="closeMenuIfNeeded('/my-portfolio/projects')" to="/my-portfolio/projects">My Projects</router-link></li>
                     </ul> 
                 </div>
             </div>
@@ -44,27 +44,46 @@ export default {
   data() {
     return {
       isMenuOpen: false,
-      isOpened: false
+      isMenuClosed: false,
+      isOpened: false,
     };
   },
   methods: {
     handleToggleMenu() {
-      this.isMenuOpen = !this.isMenuOpen;
-      if (!this.isMenuOpen) {
+      if (this.isMenuOpen === true) {
+        this.isMenuOpen = false;
+        this.isMenuClosed = true;
         this.isOpened = false;
         document.documentElement.style.overflow = 'auto';
+      } else {
+        this.isMenuOpen = true;
+        this.isMenuClosed = false;
+        this.isOpened = true;
+        document.documentElement.style.overflow = 'hidden';
       }
     },
     handleIconMenuClick() {
       this.isOpened = true;
       document.documentElement.style.overflow = 'hidden';
+    },
+    closeMenuIfNeeded(targetRoute) {
+      const currentRoute = this.$route.path;
+      if (this.isMenuOpen && currentRoute === targetRoute) {
+        this.isMenuOpen = false;
+        this.isMenuClosed = true;
+        this.isOpened = false;
+        document.documentElement.style.overflow = 'auto';
+      }
     }
   },
   watch: {
     $route(to, from) {
-      this.isMenuOpen = false;
-      this.isOpened = false;
-      document.documentElement.style.overflow = 'auto';
+      if (this.isMenuOpen === true) {
+        this.isMenuOpen = false;
+        this.isMenuClosed = true;
+        this.isOpened = false;
+        document.documentElement.style.overflow = 'auto';
+      }
     }
   }
 };

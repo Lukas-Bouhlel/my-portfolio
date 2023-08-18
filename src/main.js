@@ -10,8 +10,8 @@ import './assets/main.scss'
 
 const routes = [
     { path: '/my-portfolio', component: Home },
-    { path: '/biography', component: Biography },
-    { path: '/projects', component: Projects },
+    { path: '/my-portfolio/biography', component: Biography },
+    { path: '/my-portfolio/projects', component: Projects },
 ];
 
 const router = createRouter({
