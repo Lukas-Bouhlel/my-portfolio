@@ -1,24 +1,22 @@
+
 import { createApp } from 'vue'
 import App from './App.vue'
 import Home from './pages/Home.vue'
 import Biography from './pages/Biography.vue'
 import Projects from './pages/MyProjects.vue'
 import { createRouter, createWebHistory } from 'vue-router'
+
 import './assets/main.scss'
+
+const routes = [
+    { path: '/my-portfolio', component: Home },
+    { path: '/my-portfolio/biography', component: Biography },
+    { path: '/my-portfolio/projects', component: Projects },
+];
 
 const router = createRouter({
     history: createWebHistory(),
-    routes: [
-        { path: '/', component: Home },
-        { path: '/biography', component: Biography },
-        { path: '/projects', component: Projects },
-        
-    ],
-    scrollBehavior(to, from, savedPosition) {
-        const progressBar = document.querySelector(".progress-bar");
-        progressBar.style.width = '0%';
-        return { top: 0 };
-    },
+    routes
 })
 
 let content = document.querySelector(".content");
@@ -35,6 +33,6 @@ window.onload = function () {
     document.addEventListener('scroll', updateProgressBar);
 }
 
-const app = createApp(App)
+const app = createApp(App);
 app.use(router)
 app.mount('#app')

@@ -1,5 +1,5 @@
 <template>
-  <header :class="{ 'projects-header': shouldAddClassToHeader }">
+  <header>
     <div class="svg-container">
       <svg class="background-svg" width="720" height="629" viewBox="0 0 720 629" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g clip-path="url(#clip0_257_693)">
@@ -13,7 +13,7 @@
       </svg>
     </div>
     <nav>
-      <router-link to="/" class="logo">Lukas Bouhlel</router-link>
+      <router-link to="/my-portfolio" class="logo">Lukas Bouhlel</router-link>
         <div class="menu-burger">
             <div @click="handleToggleMenu" class="container-button-menu">
                 <IconMenu :isOpened="isOpened"  @click="handleIconMenuClick"/> 
@@ -22,9 +22,9 @@
                 <div class="background-menu animated"></div>
                 <div class="content-menu">
                     <ul>
-                      <li><router-link @click="closeMenuIfNeeded('/')" to="/">Home</router-link></li>
-                      <li><router-link @click="closeMenuIfNeeded('/biography')" to="/biography">Biography</router-link></li>
-                      <li><router-link @click="closeMenuIfNeeded('/projects')" to="/projects">My Projects</router-link></li>
+                      <li><router-link @click="closeMenuIfNeeded('/my-portfolio')" to="/my-portfolio">Home</router-link></li>
+                      <li><router-link @click="closeMenuIfNeeded('/my-portfolio/biography')" to="/my-portfolio/biography">Biography</router-link></li>
+                      <li><router-link @click="closeMenuIfNeeded('/my-portfolio/projects')" to="/my-portfolio/projects">My Projects</router-link></li>
                     </ul> 
                 </div>
             </div>
@@ -46,13 +46,7 @@ export default {
       isMenuOpen: false,
       isMenuClosed: false,
       isOpened: false,
-      isProjectsPage: false,
     };
-  },
-  computed: {
-    shouldAddClassToHeader() {
-      return this.$route.path === '/projects';
-    },
   },
   methods: {
     handleToggleMenu() {

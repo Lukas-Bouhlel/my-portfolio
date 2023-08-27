@@ -1,11 +1,7 @@
-<script setup>
-    import Slider from '../components/Projects/Slider.vue';
-    import Footer from '../components/Footer/Footer.vue';
-</script>
-
 <template>
-    <main id="projects">
-        <Slider/>
-    </main>
-    <Footer/>
+    <section class="myProjects">
+        <div class="container">
+            <h1>Page MyProjects</h1>
+        </div>
+    </section>
 </template>

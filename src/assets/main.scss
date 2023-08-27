@@ -1,27 +1,15 @@
 @import './styles/variables';
 @import './styles/custom.scss';
 @import './styles/navbar.scss';
-
-@import './styles/home/thumbnail.scss';
-@import './styles/home/projects.scss';
-@import './styles/home/about.scss';
-@import './styles/home/contact.scss';
-
-@import './styles/biography/thumbnail.scss';
-@import './styles/biography/professionals.scss';
-@import './styles/biography/hobbies.scss';
-@import './styles/biography/formations.scss';
-
-@import './styles/projets.scss';
-
+@import './styles/thumbnail.scss';
+@import './styles/projects.scss';
+@import './styles/about.scss';
+@import './styles/contact.scss';
+@import './styles/biography.scss';
 @import './styles/footer.scss';
 @import './styles/media_query.scss';
 @import 'https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap';
 @import 'https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap';
-
-html {
-    scrollbar-width: none;
-}
 
 body {
     font-family: 'Comfortaa', sans-serif;
@@ -45,6 +33,7 @@ header {
     transition: width .25s;
     z-index: 9999;
 }
+
 ::-webkit-scrollbar {
     display: none;
 }

@@ -7,24 +7,18 @@
     pointer-events: none; 
 }
 
-#biography .container,
 .container {
     padding: 12px 25px;
 }
 
 @media screen and (min-width: 992px) {
-    #biography .container,
     .container {
         padding: 12px 120px;
     }
 }
 
+  
 .background-svg {
     width: 107px; 
     height: 272px;
-}
-
-.projects-header {
-    position: absolute;
-    width: 100%;
 }

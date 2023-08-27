@@ -1,6 +1,6 @@
 <template>
     <div>
-        <audio ref="audioPlayer" :src="audioSrc" type="audio/mp3" autoplay></audio>
+        <audio ref="audioPlayer" :src="audioSrc" type="audio/mp3"></audio>
     </div>
 </template>  
   
@@ -8,7 +8,7 @@
 export default {
   data() {
     return {
-      audioSrc: "/audio.mp3"
+      audioSrc: "../../public/audio.mp3"
     };
   },
   methods: {
