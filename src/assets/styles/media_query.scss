@@ -13,6 +13,81 @@
     }
 }
 
+@media screen and (min-width: 500px) {
+    #contacts {
+        .container {
+            .form-container {
+                .wrapper-field {
+                    div {
+                        input {
+                            padding-right: 15%;
+                            padding-left: 10px;
+                            width: 100%;
+                        }
+                        .char-counter {
+                            display: flex;
+                        }
+                    }
+                    div{
+                        textarea {
+                            padding-right: 15%;
+                            padding-left: 10px;
+                            width: 100%;
+                        }
+                        .char-counter2 {
+                            display: flex;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #projects {
+        #carousel-wrapper {  
+            #menu {
+                width: 450px;
+                height: 500px;
+                flex-direction: column;
+                #current-option {
+                    transform: translate(-10%, 0%);     
+                    align-items: center;
+                    padding-left: 0px;
+                    #current-option-text1 {
+                        font-size: 1.6rem;
+                        width: 220px;
+                        height: auto;
+                    }
+                    #current-option-text2 {
+                        font-size: 15px;
+                        width: 220px;
+                        height: 180px;
+                    }
+                    #current-option-text3 {
+                        font-size: 0.8rem;
+                        width: 220px;
+                        height: auto;
+                    }
+                }
+                #previous-option {
+                    transform: translate(150px, 0px);
+                }
+                #next-option {
+                    transform: translate(150px, -100px) rotate(180deg);
+                }
+            }
+            #image {
+                transform: translate(0, 0);
+                width: 450px;
+                height: 200px;
+                position: inherit;
+            }
+        }
+    }
+    .projects-footer {
+        position: inherit;
+    }
+}
+
 @media screen and (min-width: 600px) {
     .thumbnail {
         .container {
@@ -76,6 +151,14 @@
             }
         }
     }
+    #biography {
+        h1 {
+            font-size: 50px;
+        }
+        h2 {
+            font-size: 45px;
+        }
+    }
 }
 
 @media screen and (min-width: 700px) {
@@ -87,6 +170,89 @@
         width: 453px;
         height: 396px;
     } 
+}
+
+@media screen and (min-width: 750px) {
+    #projects {
+        #carousel-wrapper {  
+            #menu {
+            width: 720px;
+            flex-direction: row;
+            height: 380px;
+                #current-option {
+                    transform: translate(-25%, 0%);      
+                    align-items: center;   
+                    padding-left: 0px;
+                    #current-option-text1 {
+                        font-size: 1.6rem;
+                        width: 220px;
+                        height: auto;
+                    }
+                    #current-option-text2 {
+                        font-size: 15px;
+                        width: 220px;
+                        height: 180px;
+                    }
+                    #current-option-text3 {
+                        font-size: 0.8rem;
+                        width: 220px;
+                        height: auto;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        justify-content: flex-end;
+                    }
+                }
+                #previous-option {
+                    transform: translate(310px, 50px);
+                }
+                #next-option {
+                    transform: translate(310px, -50px) rotate(180deg);
+                }
+            }
+            #image {
+              transform: translate(140px, 0);
+              width: 240px;
+              height: 240px;
+              position: absolute;
+            }
+            
+            &.anim-next {
+                pointer-events: none;
+
+                #previous-option {
+                animation: next-top-arrow 0.65s 0.085s;
+                }
+
+                #next-option {
+                animation: next-bottom-arrow 0.65s 0.085s;
+                }
+                
+                #image {
+                animation: next-image 0.65s 0.085s;
+                }
+            }
+
+            &.anim-previous {
+                pointer-events: none;
+
+                #previous-option {
+                animation: previous-top-arrow 0.65s 0.085s;
+                }
+
+                #next-option {
+                animation: previous-bottom-arrow 0.65s 0.085s;
+                }
+                
+                #image {
+                animation: previous-image 0.65s 0.085s;
+                }
+            }
+        } 
+    }
+    .projects-footer {
+        position: absolute;
+    }
 }
 
 @media screen and (min-width: 992px) {
@@ -178,7 +344,7 @@
                         }
                     }
                 }
-                a {
+                .seeMore {
                     margin: auto;
                     padding-left: 2px;
                     .see-more {
@@ -189,6 +355,42 @@
                     }
                 }
             }
+        }
+    }
+    .formations {
+        .svg-splash-2 {
+            display: block;
+        }
+        .container {
+            .contentFormations{
+                .svg-splash {
+                    display: block;
+                }
+            }
+        }
+    }
+    #biography {
+        .hobbies {
+            margin-top: 300px;
+            .content .loisirs {
+                padding: 200px 100px;
+            }
+        }
+        .formations {
+            margin-top: 55px;
+            .container .contentFormations {
+                padding-left: 5%;
+                padding-right: 5%;
+                .paragraph-formations {
+                    padding: 0 18%;
+                }
+                .formations-content a {
+                    padding: 35px 13px;
+                }
+            } 
+        } 
+        .professionals .container .contentProfessionnalExp .professional-container .professional-details {
+            padding: 150px 0;
         }
     }
 }
@@ -234,6 +436,16 @@
                             }
                         }
                     }
+                }
+            }
+        }
+    }
+    .formations {
+        .container {
+            .contentFormations  {
+                .formations-content {
+                    flex-direction: row;
+                    align-items: flex-start;
                 }
             }
         }

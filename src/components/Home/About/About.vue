@@ -4,7 +4,7 @@
             <div>
                 <div class="container-images">
                     <div class="image-wrapper">
-                        <img src="../../assets/images/myProfile.png" ref="tiltImage"/>
+                        <img src="../../../assets/images/myProfile.png" ref="tiltImage"/>
                     </div>
                 </div>
             </div>
@@ -19,7 +19,7 @@
                     </span>
                     ...
                 </p>
-                <router-link to="/my-portfolio/biography">
+                <router-link to="/biography">
                     <button>Resume</button>
                 </router-link>
             </div>
