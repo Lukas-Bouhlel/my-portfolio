@@ -18,7 +18,6 @@
 export default {
     methods: {
         handleScrollLinkClick() {
-            console.log('toto')
             this.$emit('scroll-link-clicked');
         }
     }
