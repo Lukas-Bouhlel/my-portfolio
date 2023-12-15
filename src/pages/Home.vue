@@ -1,5 +1,4 @@
 <script setup>
-  // import Audio from '../components/Audio.vue';
   import Thumbnail from '../components/Home/Thumbnail/Thumbnail.vue';
   import Projects from '../components/Home/Projects/Projects.vue';
   import About from '../components/Home/About/About.vue';
