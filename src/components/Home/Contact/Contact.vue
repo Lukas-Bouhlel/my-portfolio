@@ -66,6 +66,7 @@ export default {
           name: this.name,
           email: this.email,
           message: this.message,
+          origin: "portfolio-lukas-bouhlel"
         };
         try {
           await axios.post('https://hook.eu1.make.com/uqvsbho8b8dth6d2vwfk98f97598l4i9', formData);
